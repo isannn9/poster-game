@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAND JUMPS</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#111;
+            overflow:hidden;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .menu{
+            position:relative;
+            width:100vw;
+            height:100vh;
+            background:url("poster.png") center center/cover no-repeat;
+        }
+
+        .overlay{
+            position:absolute;
+            inset:0;
+            background:linear-gradient(to bottom,rgba(0,0,0,.15),rgba(0,0,0,.35));
+        }
+
+        .title{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-60%);
+            text-align:center;
+            color:white;
+            font-weight:900;
+            text-shadow:
+                -6px -6px 0 #000,
+                 6px -6px 0 #000,
+                -6px  6px 0 #000,
+                 6px  6px 0 #000;
+        }
+
+        .title h1{
+            font-size:90px;
+            line-height:80px;
+        }
+
+        .title h2{
+            font-size:110px;
+            color:#ffb400;
+            line-height:100px;
+        }
+
+        .play{
+            position:absolute;
+            left:50%;
+            bottom:70px;
+            transform:translateX(-50%);
+        }
+
+        .play button{
+            width:260px;
+            height:75px;
+            border:none;
+            border-radius:18px;
+            background:#FFC928;
+            color:#222;
+            font-size:32px;
+            font-weight:bold;
+            cursor:pointer;
+            box-shadow:0 8px 0 #b97800;
+            transition:.2s;
+        }
+
+        .play button:hover{
+            transform:scale(1.05);
+        }
+
+        .play button:active{
+            transform:translateY(4px);
+            box-shadow:0 4px 0 #b97800;
+        }
+
+        @media(max-width:768px){
+
+            .title h1{
+                font-size:52px;
+                line-height:50px;
+            }
+
+            .title h2{
+                font-size:66px;
+                line-height:60px;
+            }
+
+            .play button{
+                width:180px;
+                height:55px;
+                font-size:24px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+
+    <div class="overlay"></div>
+
+    <div class="title">
+        <h1>LAND</h1>
+        <h2>JUMPS</h2>
+    </div>
+
+    <div class="play">
+        <button onclick="location.href='game.html'">PLAY</button>
+    </div>
+
+</div>
+
+</body>
+</html>
